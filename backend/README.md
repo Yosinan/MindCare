@@ -1,1 +1,1 @@
-# This is the backey for the MindCare web application
+# This is the backend for the MindCare web application
