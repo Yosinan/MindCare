@@ -1,0 +1,1 @@
+# This is the backey for the MindCare web application
