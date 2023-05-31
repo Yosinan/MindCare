@@ -29,5 +29,6 @@
     "nodemon": "^2.0.22",
     "react-router-dom": "^6.11.2"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "keywords": []
 }
