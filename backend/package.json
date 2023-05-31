@@ -4,6 +4,8 @@
   "description": "MindCare is a comprehensive mental health support web app designed to provide accessible resources, tools, and support to individuals seeking assistance with their mental well-being.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
