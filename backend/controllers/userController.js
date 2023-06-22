@@ -8,7 +8,7 @@ const User = require("../models/userModel");
 const passwordValidator = require('password-validator');
 const nodemailer = require('nodemailer');
 
-// Set up the transporter for sending emails
+// Set up the transporter for sending emails 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
