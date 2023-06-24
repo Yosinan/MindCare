@@ -68,7 +68,7 @@ const handleSubmit = async (e) => {
     if (response.ok) {
       const data = await response.json();
       setResponseMessage(data.message);
-      togglePage();
+      // togglePage();
     } else {
       const error = await response.json();
       setResponseMessage(error.error);
