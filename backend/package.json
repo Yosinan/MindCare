@@ -33,5 +33,6 @@
     "password-validator": "^5.3.0",
     "react-router-dom": "^6.11.2"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {}
 }
