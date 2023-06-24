@@ -40,7 +40,7 @@ const PasswordStrengthIndicator = ({ password }) => {
 };
 
 
-const Register = (props) => {
+const Register = ({ togglePage }) => {
   const[email,setEmail]=useState('');
   const[password,setPassword]=useState('');
   const[name,setName]=useState('');
@@ -68,7 +68,7 @@ const handleSubmit = async (e) => {
     if (response.ok) {
       const data = await response.json();
       setResponseMessage(data.message);
-      // togglePage();
+      togglePage();
     } else {
       const error = await response.json();
       setResponseMessage(error.error);
@@ -107,7 +107,7 @@ const handleSubmit = async (e) => {
       
    </form>
       
-      <button className='link-btn' onClick={()=>props.onFormSwitch("login")}>Already have an account?Login here</button>
+      <button className='link-btn' onClick={togglePage}>Already have an account?Login here</button>
     </div>
   )
 }
