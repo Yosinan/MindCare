@@ -19,7 +19,7 @@ const commentSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
-  // we'll add another if needed
+  
 });
 
 const Comment = mongoose.model('Comment', commentSchema);
