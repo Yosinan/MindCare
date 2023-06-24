@@ -71,7 +71,7 @@ const PasswordStrengthIndicator = ({ password }) => {
   );
 };
 
-export const Register = ({ togglePage }) => {
+const Register = ({ togglePage }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -170,3 +170,5 @@ export const Register = ({ togglePage }) => {
   );
   
 };
+
+export default Register;
