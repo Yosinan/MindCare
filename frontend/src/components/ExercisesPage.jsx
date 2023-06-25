@@ -7,42 +7,36 @@ import './ExercisesPage.css';
 const ExercisesPage = () => {
   const [selectedExercise, setSelectedExercise] = useState(null);
 
-  const handleExerciseSelect = (exerciseName) => {
-    setSelectedExercise(exerciseName);
+  const handleExerciseSelect = (event) => {
+    setSelectedExercise(event.target.value);
   };
 
-  // const renderExercise = () => {
-  //   switch (selectedExercise) {
-  //     case 'relaxation':
-  //       return <RelaxationExercise />;
-  //     case 'mindfulness':
-  //       return <MindfulnessExercise />;
-  //     case 'stressReduction':
-  //       return <StressReductionTechnique />;
-  //     default:
-  //       return null;
-  //   }
-  // };
+  const renderExercise = () => {
+    switch (selectedExercise) {
+      case 'relaxation':
+        return <RelaxationExercise />;
+      case 'mindfulness':
+        return <MindfulnessExercise />;
+      case 'stressReduction':
+        return <StressReductionTechnique />;
+      default:
+        return null;
+    }
+  };
 
   return (
     <div>
       <h1>MindCare Exercises</h1>
-      {/*  other UI elements */}
-      <ul>
-        <li onClick={() => handleExerciseSelect('relaxation')}>Relaxation Exercise</li>
-        <li onClick={() => handleExerciseSelect('mindfulness')}>Mindfulness Exercise</li>
-        <li onClick={() => handleExerciseSelect('stressReduction')}>Stress Reduction Technique</li>
-      </ul>
+
+      <select value={selectedExercise} onChange={handleExerciseSelect}>
+        <option value="">Select an Exercise</option>
+        <option value="relaxation">Relaxation Exercise</option>
+        <option value="mindfulness">Mindfulness Exercise</option>
+        <option value="stressReduction">Stress Reduction Technique</option>
+      </select>
+
       <div className="exercise-container">
-        <div className={`exercise ${selectedExercise === 'relaxation' ? 'selected' : ''}`}>
-          <RelaxationExercise />
-        </div>
-        <div className={`exercise ${selectedExercise === 'mindfulness' ? 'selected' : ''}`}>
-          <MindfulnessExercise />
-        </div>
-        <div className={`exercise ${selectedExercise === 'stressReduction' ? 'selected' : ''}`}>
-          <StressReductionTechnique />
-        </div>
+        {renderExercise()}
       </div>
     </div>
   );
