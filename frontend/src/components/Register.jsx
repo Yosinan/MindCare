@@ -25,7 +25,7 @@ const PasswordStrengthIndicator = ({ password }) => {
   };
   return password.length > 0 ? (
     <div>
-      <label>Strength:</label>
+      <p>Strength</p>
       <div
         style={{
           width: '80px',
