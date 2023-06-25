@@ -3,6 +3,8 @@ import './App.css';
 import { useState } from 'react';
 import Login from './components/Login';
 import Register from './components/Register';
+import ExercisesPage from './ExercisesPage';
+
 
 
 const App = () => {
