@@ -4,7 +4,7 @@ const express = require("express");
 const start = require('./database');
 const userRouter = require("./routes/userRoute");
 const statusRouter = require("./routes/status");
-const chatRoutes = require('./routes/chatRoute');
+// const chatRoutes = require('./routes/chatRoute');
 // const errorHandler = require('./middlewares/errorHandler');
 const cors = require("cors");
 const cookieParser = require('cookie-parser');
@@ -21,7 +21,7 @@ app.use(cookieParser());
 // Routes
 app.use('/', userRouter);
 app.use('/', statusRouter);
-app.use('/', chatRoutes);
+// app.use('/', chatRoutes);
 
 // Error handler
 // app.use(errorHandler);
