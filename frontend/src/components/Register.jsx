@@ -87,11 +87,11 @@ const handleSubmit = async (e) => {
       )}
       <form action="" onSubmit={handleSubmit} className='register-form'>
        <label htmlFor="name" >Full Name</label>
-       <input type="text" id='name' placeholder='Full Name' value={name} onChange={(e)=>setName(e.target.value)}/>
+       <input type="text" id='name' placeholder='Full Name' value={name} required={true} onChange={(e)=>setName(e.target.value)}/>
        <label htmlFor="email" >Email</label>
-       <input type="email" id='email' placeholder='youremail@gmail.com' value={email} onChange={(e)=>setEmail(e.target.value)}/>
+       <input type="email" id='email' placeholder='youremail@gmail.com' value={email} required={true} onChange={(e)=>setEmail(e.target.value)}/>
        <label htmlFor="name">Password</label>
-       <input  type="password" id='password' placeholder='*********' value={password} onChange={(e)=>setPassword(e.target.value)} />
+       <input  type="password" id='password' placeholder='*********' value={password} required={true} onChange={(e)=>setPassword(e.target.value)} />
        <PasswordStrengthIndicator password={password} />
        <label>Confirm Password:&nbsp;
            <input

@@ -41,9 +41,9 @@ function Login({ onLogin, togglePage }) {
         <form action="" onSubmit={handleSubmit} className='login-form'>
       
        <label htmlFor="email" >Email</label>
-       <input type="email" id='email' placeholder='youremail@gmail.com' value={email} onChange={(e)=>setEmail(e.target.value)}/>
+       <input type="email" id='email' placeholder='youremail@gmail.com' value={email} required={true} onChange={(e)=>setEmail(e.target.value)}/>
        <label htmlFor="name">Password</label>
-       <input  type="password" id='password' placeholder='********' value={password} onChange={(e)=>setPassword(e.target.value)} />
+       <input  type="password" id='password' placeholder='********' value={password} required={true} onChange={(e)=>setPassword(e.target.value)} />
        <button type='submit'>Login</button>
       
    </form>
