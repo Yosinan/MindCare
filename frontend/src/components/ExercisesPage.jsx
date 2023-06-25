@@ -11,18 +11,18 @@ const ExercisesPage = () => {
     setSelectedExercise(exerciseName);
   };
 
-  const renderExercise = () => {
-    switch (selectedExercise) {
-      case 'relaxation':
-        return <RelaxationExercise />;
-      case 'mindfulness':
-        return <MindfulnessExercise />;
-      case 'stressReduction':
-        return <StressReductionTechnique />;
-      default:
-        return null;
-    }
-  };
+  // const renderExercise = () => {
+  //   switch (selectedExercise) {
+  //     case 'relaxation':
+  //       return <RelaxationExercise />;
+  //     case 'mindfulness':
+  //       return <MindfulnessExercise />;
+  //     case 'stressReduction':
+  //       return <StressReductionTechnique />;
+  //     default:
+  //       return null;
+  //   }
+  // };
 
   return (
     <div>
@@ -44,7 +44,6 @@ const ExercisesPage = () => {
           <StressReductionTechnique />
         </div>
       </div>
-      {renderExercise()}
     </div>
   );
 };
