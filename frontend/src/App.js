@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import Login from './components/Login';
 import Register from './components/Register';
-import ExercisesPage from './ExercisesPage';
+import ExercisesPage from './components/ExercisesPage';
 
 
 
@@ -19,8 +19,8 @@ const toggleform=(formName)=>{
     <div className='App'>
       <div>
         {
-          // currentForm==="login"?<Login onFormSwitch={toggleform} />:<Register onFormSwitch={toggleform}/>
-          <ExercisesPage></ExercisesPage>
+          currentForm==="login"?<Login onFormSwitch={toggleform} />:<Register onFormSwitch={toggleform}/>
+          // <ExercisesPage></ExercisesPage>
         }
       </div>
       
