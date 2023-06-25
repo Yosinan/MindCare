@@ -103,7 +103,7 @@ const handleSubmit = async (e) => {
           />
         </label>
          <br />
-       <button type='submit'>Login</button> 
+       <button type='submit'>Sign Up</button> 
       
    </form>
       
