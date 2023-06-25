@@ -23,7 +23,7 @@ const PasswordStrengthIndicator = ({ password }) => {
       return 'gray';
   };
   };
-  return (
+  return password.length > 0 ? (
     <div>
       <label>Strength:</label>
       <div
@@ -36,7 +36,7 @@ const PasswordStrengthIndicator = ({ password }) => {
         }}
       ></div>
     </div>
-  );
+  ) : null ;
 };
 
 
