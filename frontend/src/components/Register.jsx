@@ -93,19 +93,12 @@ const handleSubmit = async (e) => {
        <label htmlFor="name">Password</label>
        <input  type="password" id='password' placeholder='*********' value={password} required={true} onChange={(e)=>setPassword(e.target.value)} />
        <PasswordStrengthIndicator password={password} />
-       <label>Confirm Password:&nbsp;
-           <input
-            type="password"
-            placeholder='*********'
-            value={confirmPassword}
-            required={true}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
-        </label>
-         <br />
+       <label>Confirm Password</label>
+       <input type="password" placeholder='*********' value={confirmPassword} required={true} onChange={(e) => setConfirmPassword(e.target.value)}/>
+       <br />
        <button type='submit'>Sign Up</button> 
       
-   </form>
+       </form>
       
       <button className='link-btn' onClick={togglePage}>Already have an account?Login here</button>
     </div>
