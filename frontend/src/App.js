@@ -19,7 +19,8 @@ const toggleform=(formName)=>{
     <div className='App'>
       <div>
         {
-          currentForm==="login"?<Login onFormSwitch={toggleform} />:<Register onFormSwitch={toggleform}/>
+          // currentForm==="login"?<Login onFormSwitch={toggleform} />:<Register onFormSwitch={toggleform}/>
+          <ExercisesPage></ExercisesPage>
         }
       </div>
       
