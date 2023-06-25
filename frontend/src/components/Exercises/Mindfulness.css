@@ -1,0 +1,26 @@
+/* MindfulnessExercise.css */
+
+.mindfulness-exercise {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .mindfulness-exercise h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .mindfulness-exercise h3 {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .mindfulness-exercise p {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
