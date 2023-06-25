@@ -1,4 +1,5 @@
 import React from 'react';
+import './Mindfulness.css';
 
 const MindfulnessExercise = () => {
   return (
