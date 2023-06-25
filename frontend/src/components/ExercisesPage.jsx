@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MindfulnessExercise from './Exercises/Mindfulness';
 import RelaxationExercise from './Exercises/Relaxation';
 import StressReductionTechnique from './Exercises/StressReduction';
+import './ExercisesPage.css';
 
 const ExercisesPage = () => {
   const [selectedExercise, setSelectedExercise] = useState(null);
@@ -32,6 +33,17 @@ const ExercisesPage = () => {
         <li onClick={() => handleExerciseSelect('mindfulness')}>Mindfulness Exercise</li>
         <li onClick={() => handleExerciseSelect('stressReduction')}>Stress Reduction Technique</li>
       </ul>
+      <div className="exercise-container">
+        <div className={`exercise ${selectedExercise === 'relaxation' ? 'selected' : ''}`}>
+          <RelaxationExercise />
+        </div>
+        <div className={`exercise ${selectedExercise === 'mindfulness' ? 'selected' : ''}`}>
+          <MindfulnessExercise />
+        </div>
+        <div className={`exercise ${selectedExercise === 'stressReduction' ? 'selected' : ''}`}>
+          <StressReductionTechnique />
+        </div>
+      </div>
       {renderExercise()}
     </div>
   );
