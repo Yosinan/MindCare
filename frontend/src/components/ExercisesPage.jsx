@@ -26,7 +26,7 @@ const ExercisesPage = () => {
 
   return (
     <div>
-      <h1>Exercises Page</h1>
+      <h1>MindCare Exercises</h1>
       {/*  other UI elements */}
       <ul>
         <li onClick={() => handleExerciseSelect('relaxation')}>Relaxation Exercise</li>
