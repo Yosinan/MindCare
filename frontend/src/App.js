@@ -12,7 +12,7 @@ import Contacts from "./pages/Contacts";
 import FAQ from "./pages/FAQ";
 import Blog from "./pages/Blog";
 import Our_team from "./pages/Our_team";
-import Footer from "./components/Footer";
+import Footer from "./components/footer/Footer";
 
 import ExercisesPage from "./pages/ExercisesPage";
 
