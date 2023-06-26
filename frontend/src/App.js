@@ -1,64 +1,46 @@
-import React  from 'react';
-import './App.css';
-import { useState } from 'react';
-import { Route,Routes } from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
-import Login from './components/Login';
-import Register from './components/Register';
-import NavBar from './components/NavBar';
-import Home from './pages/Home';
-import Contacts from './pages/Contacts';
-import FAQ from './pages/FAQ';
-import Blog from './pages/Blog';
-import Our_team from './pages/Our_team';
+import Log from "./pages/Log";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
+import Contacts from "./pages/Contacts";
+import FAQ from "./pages/FAQ";
+import Blog from "./pages/Blog";
+import Our_team from "./pages/Our_team";
+import Footer from "./components/footer/Footer";
 
-import ExercisesPage from './components/ExercisesPage';
-
+import ExercisesPage from "./pages/ExercisesPage";
 
 const App = () => {
-
-const [currentForm,setCurrentForm]=useState('login');
-const toggleform=(formName)=>{
-  setCurrentForm(formName);
-
-}
+  const [currentForm, setCurrentForm] = useState("login");
+  const toggleform = (formName) => {
+    setCurrentForm(formName);
+  };
 
   return (
-    
-    <div className="App" >
-     <NavBar/>
+    <div className="App">
+      <NavBar />
 
       <Routes>
-        <Route index element={<Home/>}/>
-        <Route path='/blog' element={<Blog/>}/>
-        <Route path='/our-team' element={<Our_team/>}/>
-        <Route path='/contacts' element={<Contacts/>}/>
-        <Route path='/faq' element={<FAQ/>}/>
-      
+        <Route index element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/our-team" element={<Our_team />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/exercise" element={<ExercisesPage />} />
+        <Route path="/Login" element={<Log />} />
 
-
-       
       </Routes>
+      <Footer/>
     </div>
-
-  )}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
+  );
+};
 
 // const App = () => {
 
@@ -99,11 +81,7 @@ const toggleform=(formName)=>{
 //           // <ExercisesPage></ExercisesPage>
 //         }
 //       </div> */}
-      
+
 //     </div>
-  
-
-
-
 
 export default App;
