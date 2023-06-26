@@ -70,7 +70,7 @@ const Register = ({ togglePage }) => {
       console.error('Error:', error);
     }
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -124,7 +124,7 @@ const Register = ({ togglePage }) => {
           <br />
           <div>
             <input type="checkbox" id="subscribe" checked={subscribeNewsletter} onChange={(e) => setSubscribeNewsletter(e.target.checked)} />
-            <label htmlFor="subscribe">Subscribe to newsletter</label>
+            <label htmlFor="subscribe">&nbsp;&nbsp;Subscribe to newsletter</label>
           </div>
           <button type="submit">Sign Up</button>
         </form>
