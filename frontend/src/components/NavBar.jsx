@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, NavLink } from "react-router-dom";
 
 import style from "./NavBar.module.css";
 
 function NavBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div>
       <main>
@@ -21,15 +31,43 @@ function NavBar() {
             </NavLink>
           </div>
 
-          <div className={style.nav_section}>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/blog">Blog</NavLink>
-            <NavLink to="/our-team">Our Team</NavLink>
-            <NavLink to="/contacts">Contacts</NavLink>
-            <NavLink to="/faq">FAQ's</NavLink>
-            <NavLink to="/exercise">Exercises</NavLink>
-            <NavLink to="/login">Login</NavLink>
+          <div
+            className={`${style.nav_section} ${
+              isMenuOpen ? style.menu_open : ""
+            }`}
+          >
+            <NavLink to="/" onClick={closeMenu}>
+              Home
+            </NavLink>
+            <NavLink to="/blog" onClick={closeMenu}>
+              Blog
+            </NavLink>
+            <NavLink to="/our-team" onClick={closeMenu}>
+              Our Team
+            </NavLink>
+            <NavLink to="/contacts" onClick={closeMenu}>
+              Contacts
+            </NavLink>
+            <NavLink to="/faq" onClick={closeMenu}>
+              FAQ's
+            </NavLink>
+            <NavLink to="/exercise" onClick={closeMenu}>
+              Exercises
+            </NavLink>
+            <NavLink to="/login" onClick={closeMenu}>
+              Login
+            </NavLink>
+          </div>
 
+          <div
+            className={`${style.menu_icon} ${
+              isMenuOpen ? style.menu_open : ""
+            }`}
+            onClick={toggleMenu}
+          >
+            <div className={style.icon_bar}></div>
+            <div className={style.icon_bar}></div>
+            <div className={style.icon_bar}></div>
           </div>
         </nav>
       </main>
