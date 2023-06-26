@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+.home{
+ 
+}
+.front{
+
+}
+.image{
+  position: relative;
+  left: -15%;
+}
+
+.image img{
+}
+.front_qoute{
+  position: absolute;
+  top: 12%;
+  left: 48%;
+  max-width: 550px;
+
+}
+.front_qoute h1{
+  font-size: 3.5rem;
+  
+}
+.front_qoute p{
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin-top: 10px;
+}
