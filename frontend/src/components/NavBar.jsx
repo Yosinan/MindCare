@@ -27,6 +27,9 @@ function NavBar() {
             <NavLink to="/our-team">Our Team</NavLink>
             <NavLink to="/contacts">Contacts</NavLink>
             <NavLink to="/faq">FAQ's</NavLink>
+            <NavLink to="/exercise">Exercises</NavLink>
+            <NavLink to="/login">Login</NavLink>
+
           </div>
         </nav>
       </main>
