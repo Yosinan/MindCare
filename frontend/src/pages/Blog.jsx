@@ -10,7 +10,7 @@ export default function Blog() {
   // const user = true;
 
   return (
-    <Router>
+    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/posts" element={<Home />} />
@@ -19,7 +19,7 @@ export default function Blog() {
         <Route path="/write" element={<Write />} />
         <Route path="/settings" element={<Settings />} />
       </Routes>
-      </Router>
+      
   
   );
 }

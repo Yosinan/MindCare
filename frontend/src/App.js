@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Router } from "react-router-dom";
 
 import Log from "./pages/Log";
 import Login from "./pages/Login";
@@ -24,8 +24,9 @@ const App = () => {
 
   return (
     <div className="App">
+      
+      <Router>
       <NavBar />
-
       <Routes>
         <Route index element={<Home />} />
         <Route path="/blog" element={<Blog />} />
@@ -37,6 +38,7 @@ const App = () => {
 
       </Routes>
       <Footer/>
+      </Router>
     </div>
    
   );
