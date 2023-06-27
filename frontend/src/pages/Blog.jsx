@@ -4,7 +4,7 @@ import Home from './home/Home';
 import Single from './single/Single';
 import Write from './write/Write';
 import Settings from './settings/Settings';
-import './App.css';
+import './Blog.css';
 import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom'
 
 export default function Blog() {

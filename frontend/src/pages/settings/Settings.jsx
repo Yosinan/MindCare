@@ -1,5 +1,5 @@
 import './Settings.css'
-import Sidebar from "../../components/sidebar/Sidebar";
+// import Sidebar from "../../components/sidebar/Sidebar";
 export default function Settings() {
   return (
     <div className="settings">
@@ -36,7 +36,7 @@ export default function Settings() {
           </button>
         </form>
       </div>
-      <Sidebar />
+      {/* <Sidebar /> */}
     </div>
   )
 }
