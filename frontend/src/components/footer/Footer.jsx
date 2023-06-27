@@ -32,7 +32,7 @@ function Footer() {
       </div>
  
       <div className="box">
-        <h3>contact links</h3>
+        <h3>Contact Info</h3>
         <Link to="#">
           <i className="fas fa-angle-right "> </i> +251-234-234-234{" "}
         </Link>
