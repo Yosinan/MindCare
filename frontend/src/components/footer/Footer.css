@@ -1,4 +1,4 @@
-.footer{
+/* .footer{
 
   background-color:#343944;
   color: #9b9b9b;
@@ -37,4 +37,47 @@ h3{
  margin-top: 3rem;
  font-size: 2rem;
 
+} */ 
+
+.footer {
+  background-color: #343944;
+  color: #9b9b9b;
+}
+
+h3 {
+  color: white;
+}
+
+.footer .box-container {
+  display: flex; /* Change display property to flex */
+  gap: 3rem;
+  overflow-x: auto; /* Add overflow property for horizontal scrolling if needed */
+}
+
+.footer .box-container .box {
+  flex: 1; /* Distribute available space equally among the items */
+}
+
+.footer .box-container .box a {
+  color: #9b9b9b;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  display: flex;
+}
+
+.footer .box-container .box a i {
+  color: rgb(21, 21, 46);
+  padding-right: 0.5rem;
+  transition: 0.2s linear;
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 2rem;
+}
+
+/* .footer .credit {
+  text-align: center;
+  padding-top: 3rem;
+  margin-top: 3rem;
+  font-size: 2rem;
 } */
