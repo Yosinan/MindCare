@@ -12,8 +12,7 @@ export default function Blog() {
   // const user = true;
 
   return (
-    // <Router>
-       /* <Topbar /> */
+   
    
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,6 +22,6 @@ export default function Blog() {
         <Route path="/settings" element={<Settings />} />
       </Routes>
       
-      // </Router>
+     
   );
 }
