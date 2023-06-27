@@ -1,5 +1,4 @@
 import './Write.css'
-import Sidebar from "../../components/sidebar/Sidebar";
 export default function Write() {
   return (
     <div className="write">
