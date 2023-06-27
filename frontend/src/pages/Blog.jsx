@@ -1,9 +1,9 @@
 import React from 'react'
 // import Topbar from './components/topbar/Topbar'
-import Home from './pages/home/Home';
-import Single from './pages/single/Single';
-import Write from './pages/write/Write';
-import Settings from './pages/settings/Settings';
+import Home from './home/Home';
+import Single from './single/Single';
+import Write from './write/Write';
+import Settings from './settings/Settings';
 import './App.css';
 import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom'
 
