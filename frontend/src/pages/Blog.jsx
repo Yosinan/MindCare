@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './home/Home';
-import Topbar from '../components/topbar/Topbar';
+// import Topbar from '../components/topbar/Topbar';
 import Single from './single/Single';
 import Write from './write/Write';
 import Settings from './settings/Settings';
@@ -12,8 +12,8 @@ export default function Blog() {
   // const user = true;
 
   return (
-    <Router>
-       <Topbar />
+    // <Router>
+       /* <Topbar /> */
    
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,6 +23,6 @@ export default function Blog() {
         <Route path="/settings" element={<Settings />} />
       </Routes>
       
-      </Router>
+      // </Router>
   );
 }
