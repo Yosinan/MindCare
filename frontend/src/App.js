@@ -25,7 +25,7 @@ const App = () => {
   return (
     <div className="App">
       
-      <Router>
+     
       <NavBar />
       <Routes>
         <Route index element={<Home />} />
@@ -38,7 +38,6 @@ const App = () => {
 
       </Routes>
       <Footer/>
-      </Router>
     </div>
    
   );
