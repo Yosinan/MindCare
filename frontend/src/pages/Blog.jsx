@@ -12,12 +12,12 @@ export default function Blog() {
   return (
     
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
         {/* <Route path="/posts" element={<Home />} />
 
         <Route path="/post/:id" element={<Single />} /> */}
-        <Route path="/write" element={<Write />} />
-        <Route path="/settings" element={<Settings />} />
+        {/* <Route path="/write" element={<Write />} />
+        <Route path="/settings" element={<Settings />} /> */}
       </Routes>
       
   
