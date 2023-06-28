@@ -46,8 +46,8 @@ export default function About() {
           </div>
           <div className="moto">
           <span><i class="far fa-sharp fa-regular fa-lightbulb-on fa-sm" style={{color: "#6c297f"}}></i></span> 
-          <h2>Moto</h2>
-          <p>Empowering Minds, Transforming Lives." At our counseling office, we are driven by the belief that by empowering students to unlock their true potential and embrace personal growth, we can profoundly impact their lives.
+          <h2>Motto</h2>
+          <p>"Empowering Minds, Transforming Lives.<br/>" At our counseling office, we are driven by the belief that by empowering students to unlock their true potential and embrace personal growth, we can profoundly impact their lives.
              With compassion, expertise, and unwavering dedication, we are committed to empowering students to overcome challenges, cultivate resilience, and embark on a transformative journey towards success and fulfillment.</p>
           </div>
         </div>
