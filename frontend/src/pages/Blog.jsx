@@ -92,6 +92,22 @@ useEffect(() => {
     }
   };
 
+  const handleLogout = async () => {
+    localStorage.removeItem('token');
+    // try {
+    //   const token = localStorage.getItem('Token');
+    //   // const token = getCookie('Token');
+    //   await axios.post("http://localhost:5000/api/users/logout", {
+    //     headers: {
+    //       Authorization: `Bearer ${token}`,
+    //     },
+    //   });
+    // } catch (error) {
+    //   console.error("Error logging out:", error);
+    // //   setErrorMessage("Error logging out. Please try again.");
+    // setMessage("Error logging out. Please try again.");
+    }
+
   const handleEdit = async (blogId) => {
     try {
       // const token = getCookie('Token');
@@ -168,6 +184,7 @@ useEffect(() => {
               onChange={handleContentChange}
             />
           </div>
+          <button onClick={handleLogout}>logout</button>
           <button type="submit">Publish</button>
         </form>
         {/* {errorMessage && <p className="error-message">{errorMessage}</p>}
