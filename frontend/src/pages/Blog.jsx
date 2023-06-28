@@ -6,7 +6,9 @@ import { getCookie } from "./cookieUtil";
 function Blog() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [createdAt, setCreatedAt] = useState("");
   const [blogs, setBlogs] = useState([]);
+  const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
@@ -22,10 +24,12 @@ function Blog() {
           Authorization: `Bearer ${token}`,
         },
       });
+      setCreatedAt(response.data.createdAt);
       setBlogs(response.data);
     } catch (error) {
       console.error("Error fetching blogs:", error);
-      setErrorMessage("Error fetching blogs. Please try again.");
+    //   setErrorMessage("Error fetching blogs. Please try again.");
+      setMessage("Error fetching blogs. Please try again.");
     }
   };
 
@@ -55,10 +59,12 @@ function Blog() {
       setTitle("");
       setContent("");
       fetchBlogs(); // Refresh blogs after successful post
-      setSuccessMessage("post published successfully.");
+    //   setSuccessMessage("post published successfully.");
+    setMessage("Post published successfully.");
     } catch (error) {
       console.error("Error posting blog:", error);
-      setErrorMessage("Error posting blog. Please try again.");
+    //   setErrorMessage("Error posting blog. Please try again.");
+    setMessage("Error posting blog:", error);
     }
   };
 
@@ -86,8 +92,9 @@ function Blog() {
           </div>
           <button type="submit">Publish</button>
         </form>
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
-        {successMessage && <p className="success-message">{successMessage}</p>}
+        {/* {errorMessage && <p className="error-message">{errorMessage}</p>}
+        {successMessage && <p className="success-message">{successMessage}</p>} */}
+        {message && <p className="message">{message}</p>}
       </div>
       <div className="published-blogs-section">
         <h2>Published Blogs</h2>
@@ -96,6 +103,7 @@ function Blog() {
             <div key={blog.id} className="blog-card">
               <h3>{blog.title}</h3>
               <p>{blog.content}</p>
+              <i>Created At: {blog.createdAt}</i>
             </div>
           ))}
         </div>
