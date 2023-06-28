@@ -120,7 +120,7 @@ useEffect(() => {
   const handleDelete = async (blogId) => {
     try {
       const token = getCookie('Token');
-      const response = await fetch(`/api/posts/${blogId}`, {
+      const response = await fetch(`http://localhost:5000/api/posts/${blogId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}` // Include the token in the headers
