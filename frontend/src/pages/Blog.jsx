@@ -3,7 +3,7 @@ import axios from "axios";
 import './Blog.css';
 import { getCookie } from "./cookieUtil";
 
-function Blog() {
+export default function Blog() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [createdAt, setCreatedAt] = useState("");
@@ -221,5 +221,6 @@ useEffect(() => {
     </div>
   );
 }
+}
 
-export default Blog;
+// export default Blog;
