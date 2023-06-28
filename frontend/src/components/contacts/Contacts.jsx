@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Contacts.css'
 import photo from './photo.jpg'
-import { post } from '../../../../backend/routes/chatRoute';
+
 
 
 export default function Contacts() {
