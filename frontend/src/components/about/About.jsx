@@ -13,11 +13,11 @@ export default function About() {
         <img className="aboutImg" src={photo} alt="" />
     </div>
     <div className='contain'>
-    <div className='info'>
+    {/* <div className='info'> */}
       {/* <h6>who we are </h6> */}
-      <h2>Mental health is human right,not a privilage.</h2>
+      {/* <h2>Mental health is human right,not a privilage.</h2> */}
       {/* <p>Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Libero consectetur ipsa repellat mollitia quod commodi cum eveniet eius quia accusantium magnam blanditiis iste atque veniam quisquam perspiciatis, error, earum est.</p> */}
-      </div>
+      {/* </div> */}
 
     </div>
         <div className='container'>
