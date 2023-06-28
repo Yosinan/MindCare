@@ -1,26 +1,5 @@
 import React, { useState } from 'react';
 
-// const faqStyles = {
-//   container: {
-//     maxWidth: '800px',
-//     margin: '0 auto',
-//     padding: '20px',
-//     fontFamily: 'Arial, sans-serif',
-//   },
-//   question: {
-//     fontSize: '20px',
-//     fontWeight: 'bold',
-//     marginBottom: '10px',
-//     cursor: 'pointer',
-//   },
-//   answer: {
-//     marginBottom: '20px',
-//   },
-//   guide: {
-//     fontStyle: 'italic',
-//     marginTop: '10px',
-//   },
-// };
 const faqStyles = {
   container: {
     maxWidth: '800px',
@@ -50,13 +29,13 @@ const faqStyles = {
 function FAQ() {
   const [answersVisible, setAnswersVisible] = useState([]);
 
-  const toggleAnswerVisibility = (index) => {
-    setAnswersVisible((prevVisible) => {
-      const updatedVisible = [...prevVisible];
-      updatedVisible[index] = !prevVisible[index];
-      return updatedVisible;
-    });
-  };
+  // const toggleAnswerVisibility = (index) => {
+  //   setAnswersVisible((prevVisible) => {
+  //     const updatedVisible = [...prevVisible];
+  //     updatedVisible[index] = !prevVisible[index];
+  //     return updatedVisible;
+  //   });
+  // };
 
   const renderAnswer = (answer, index) => {
     const isVisible = answersVisible[index];
@@ -76,23 +55,19 @@ function FAQ() {
     );
   };
 
-  // const renderQuestion = (question, index) => (
-  //   <div key={`question-${index}`}>
-  //     <h3
-  //       style={faqStyles.question}
-  //       onClick={() => toggleAnswerVisibility(index)}
-  //     >
-  //       {question.question}
-  //     </h3>
-  //     {renderAnswer(question.answer, index)}
-  //   </div>
-  // );
   const renderQuestion = (question, index) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [isExpanded, setIsExpanded] = useState(false);
 
-    const toggleAnswerVisibility = () => {
-      setIsExpanded((prevExpanded) => !prevExpanded);
+    // const toggleAnswerVisibility = () => {
+    //   setIsExpanded((prevExpanded) => !prevExpanded);
+    // };
+    const toggleAnswerVisibility = (index) => {
+      setAnswersVisible((prevVisible) => {
+        const updatedVisible = [...prevVisible];
+        updatedVisible[index] = !prevVisible[index];
+        return updatedVisible;
+      });
     };
 
     return (
