@@ -11,6 +11,27 @@ function Blog() {
   const [message, setMessage] = useState("");
   // const [errorMessage, setErrorMessage] = useState("");
   // const [successMessage, setSuccessMessage] = useState("");
+  const [currentUser, setCurrentUser] = useState(null);
+
+// ...
+
+useEffect(() => {
+  // Fetch the current user information
+  const fetchCurrentUser = async () => {
+    try {
+      const token = localStorage.getItem('Token');
+      const response = await axios.get('http://localhost:5000/api/users', {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      const user = response.data;
+      setCurrentUser(user);
+    } catch (error) {
+      console.error('Failed to fetch current user:', error);
+    }
+  };
+
+  fetchCurrentUser();
+}, []);
 
   useEffect(() => {
     fetchBlogs();
