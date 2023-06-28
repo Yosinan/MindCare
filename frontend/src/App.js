@@ -9,10 +9,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
-import Contacts from "./pages/Contacts";
+import Contacts from "./components/contacts/Contacts";
 import FAQ from "./pages/FAQ";
 import Blog from "./pages/Blog";
-import Our_team from "./pages/Our_team";
+import About from "./components/about/About";
 import Footer from "./components/footer/Footer";
 
 import ExercisesPage from "./pages/ExercisesPage";
@@ -31,7 +31,7 @@ const App = () => {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/blog/*" element={<Blog />} />
-        <Route path="/our-team" element={<Our_team />} />
+        <Route path="/our-team" element={<About/>} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/exercise" element={<ExercisesPage />} />
