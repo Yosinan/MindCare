@@ -118,7 +118,7 @@ function FAQ() {
 
   const faqData = [
     {
-      question: 'Question: How can I manage stress effectively?',
+      question: 'How can I manage stress effectively?',
       answer: {
         content:
           'Answer: Managing stress effectively is crucial for maintaining good mental health. Here are some strategies you can try:',
@@ -126,7 +126,7 @@ function FAQ() {
       },
     },
     {
-      question: 'Question: How can I improve my sleep quality?',
+      question: 'How can I improve my sleep quality?',
       answer: {
         content:
           'Answer: Getting enough quality sleep is crucial for overall well-being. Here are some tips to improve your sleep quality:',
@@ -134,7 +134,7 @@ function FAQ() {
       },
     },
     {
-      question: 'Question: How can I improve my focus and concentration?',
+      question: 'How can I improve my focus and concentration?',
       answer: {
         content:
           'Answer: Improving focus and concentration can enhance productivity and overall cognitive performance. Here are some strategies you can try:',
@@ -142,7 +142,7 @@ function FAQ() {
       },
     },
     {
-      question: 'Question: How do I practice self-care?',
+      question: 'How do I practice self-care?',
       answer: {
         content:
           'Answer: Practicing self-care is essential for your well-being. Here are some self-care tips you can incorporate into your routine:',
@@ -150,7 +150,7 @@ function FAQ() {
       },
     },
     {
-      question: 'Question: How can I manage work-life balance?',
+      question: 'How can I manage work-life balance?',
       answer: {
         content:
           'Answer: Achieving a healthy work-life balance is important. Here are some strategies to help you manage work and personal life effectively:',
@@ -158,7 +158,7 @@ function FAQ() {
       },
     },
     {
-      question: 'Question: What are some techniques for stress reduction?',
+      question: 'What are some techniques for stress reduction?',
       answer: {
         content:
           'Answer: Reducing stress is crucial for your mental well-being. Here are some effective techniques you can try:',
@@ -166,7 +166,7 @@ function FAQ() {
       },
     },
     {
-      question: 'Question: How can I build resilience?',
+      question: 'How can I build resilience?',
       answer: {
         content:
           'Answer: Building resilience can help you cope with challenges. Here are some ways to enhance your resilience:',
@@ -174,7 +174,7 @@ function FAQ() {
       },
     },
     {
-      question: 'Question: How can I improve my communication skills?',
+      question: 'How can I improve my communication skills?',
       answer: {
         content:
           'Answer: Effective communication is essential in various aspects of life. Here are some tips to enhance your communication skills:',
@@ -182,7 +182,7 @@ function FAQ() {
       },
     },
     {
-      question: 'Question: What are some strategies for time management?',
+      question: 'What are some strategies for time management?',
       answer: {
         content:
           'Answer: Managing your time efficiently can increase productivity. Here are some time management strategies you can implement:',
@@ -190,7 +190,7 @@ function FAQ() {
       },
     },
     {
-      question: 'Question: How can I develop a positive mindset?',
+      question: 'How can I develop a positive mindset?',
       answer: {
         content:
           'Answer: Cultivating a positive mindset can improve your overall well-being. Here are some ways to develop a positive mindset:',
