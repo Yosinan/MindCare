@@ -37,3 +37,9 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
+  .created-at {
+    font-size: 14px;
+    color: #a0a0a0;
+    
+  }
+  

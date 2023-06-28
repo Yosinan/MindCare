@@ -102,8 +102,10 @@ function Blog() {
           {blogs.map((blog) => (
             <div key={blog.id} className="blog-card">
               <h3>{blog.title}</h3>
+              {/* <i className="created-at">Created At: {blog.createdAt}</i> */}
+              <i className="created-at">Created At: {new Date(blog.createdAt).toLocaleString()}</i>
               <p>{blog.content}</p>
-              <i>Created At: {blog.createdAt}</i>
+              
             </div>
           ))}
         </div>
