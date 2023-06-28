@@ -26,7 +26,6 @@
      
 //   );
 // }
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { getCookie } from "./cookieUtil";
@@ -35,6 +34,8 @@ function Blog() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [blogs, setBlogs] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   useEffect(() => {
     fetchBlogs();
@@ -42,15 +43,16 @@ function Blog() {
 
   const fetchBlogs = async () => {
     try {
-    const token = getCookie('Token');
-
+      const token = getCookie('Token');
       const response = await axios.get("http://localhost:5000/api/posts", {
         headers: {
           Authorization: `Bearer ${token}`,
-        },});
+        },
+      });
       setBlogs(response.data);
     } catch (error) {
       console.error("Error fetching blogs:", error);
+      setErrorMessage("Error fetching blogs. Please try again.");
     }
   };
 
@@ -72,6 +74,7 @@ function Blog() {
 
     try {
       const token = getCookie('Token');
+      console.log(token);
       await axios.post("http://localhost:5000/api/posts", postData, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -80,8 +83,10 @@ function Blog() {
       setTitle("");
       setContent("");
       fetchBlogs(); // Refresh blogs after successful post
+      setSuccessMessage("Blog post published successfully.");
     } catch (error) {
       console.error("Error posting blog:", error);
+      setErrorMessage("Error posting blog. Please try again.");
     }
   };
 
@@ -109,6 +114,8 @@ function Blog() {
           </div>
           <button type="submit">Publish</button>
         </form>
+        {errorMessage && <p>{errorMessage}</p>}
+        {successMessage && <p>{successMessage}</p>}
       </div>
       <div>
         <h2>Published Blogs</h2>
@@ -124,4 +131,5 @@ function Blog() {
 }
 
 export default Blog;
+
 
