@@ -42,6 +42,9 @@ function NavBar() {
             <NavLink to="/blog" onClick={closeMenu}>
               Blog
             </NavLink>
+            <NavLink to="/blog/write" onClick={closeMenu}>
+              Write
+            </NavLink>
             <NavLink to="/our-team" onClick={closeMenu}>
               Our Team
             </NavLink>

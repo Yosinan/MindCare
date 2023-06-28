@@ -12,9 +12,10 @@ export default function Blog() {
   // const user = true;
 
   return (
-   
-   
+
+    
       <Routes>
+        {/* <Topbar /> */}
         <Route path="/" element={<Home />} />
         <Route path="/posts" element={<Home />} />
         <Route path="/post/:id" element={<Single />} />
