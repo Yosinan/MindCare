@@ -159,13 +159,7 @@ const getUser = async (req, res) => {
       // Get user's info from the MongoDB collection
       const user = await User.findById(req.user._id);
       if (user) {
-      res.status(200).json(
-        {
-            __id: user._id,
-            name: user.name,
-            email: user.email
-        }
-      );
+      res.status(200).json(user);
       }else{
         res.status(400).json({ message: "user not found" });
       }
