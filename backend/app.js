@@ -5,6 +5,7 @@ const start = require('./database');
 const userRouter = require("./routes/userRoute");
 const statusRouter = require("./routes/status");
 const chatRoutes = require('./routes/chatRoute');
+const postRoutes = require('./routes/postRoute');
 // const errorHandler = require('./middlewares/errorHandler');
 const cors = require("cors");
 const cookieParser = require('cookie-parser');
@@ -22,6 +23,7 @@ app.use(cookieParser());
 app.use('/', userRouter);
 app.use('/', statusRouter);
 app.use('/', chatRoutes);
+app.use('/', postRoutes);
 
 // Error handler
 // app.use(errorHandler);
