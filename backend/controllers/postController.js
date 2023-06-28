@@ -61,5 +61,4 @@ const deletePost = async (req, res) => {
         res.status(400).json({ message: err.message });
     }
 }
-
 module.exports = {  getPosts, getPostById, createPost, updatePost, deletePost };
