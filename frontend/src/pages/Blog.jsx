@@ -103,7 +103,7 @@ function Blog() {
             <div key={blog.id} className="blog-card">
               <h3>{blog.title}</h3>
               {/* <i className="created-at">Created At: {blog.createdAt}</i> */}
-              <i className="created-at">Created At: {new Date(blog.createdAt).toLocaleString()}</i>
+              <i className="created-at">Posted at: {new Date(blog.createdAt).toLocaleString()}</i>
               <p>{blog.content}</p>
               
             </div>
