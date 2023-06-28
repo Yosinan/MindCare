@@ -14,15 +14,9 @@ export default function About() {
     </div>
     <div className='contain'>
     <div className='info'>
-      <div className='words'>
       {/* <h6>who we are </h6> */}
       <h2>Mental health is human right,not a privilage.</h2>
       {/* <p>Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Libero consectetur ipsa repellat mollitia quod commodi cum eveniet eius quia accusantium magnam blanditiis iste atque veniam quisquam perspiciatis, error, earum est.</p> */}
-
-      </div>
-      {/* <div>
-         <img className='images' src={image} alt="" />
-      </div> */}
       </div>
 
     </div>
