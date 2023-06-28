@@ -55,14 +55,26 @@ function FAQ() {
     );
   };
 
-  const renderQuestion = (question, index) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [isExpanded, setIsExpanded] = useState(false);
+  // const renderQuestion = (question, index) => {
+  //   // eslint-disable-next-line react-hooks/rules-of-hooks
+  //   const [isExpanded, setIsExpanded] = useState(false);
 
-    // const toggleAnswerVisibility = () => {
-    //   setIsExpanded((prevExpanded) => !prevExpanded);
-    // };
-    const toggleAnswerVisibility = (index) => {
+  //   // const toggleAnswerVisibility = () => {
+  //   //   setIsExpanded((prevExpanded) => !prevExpanded);
+  //   // };
+  //   const toggleAnswerVisibility = (index) => {
+  //     setAnswersVisible((prevVisible) => {
+  //       setIsExpanded((prevExpanded) => !prevExpanded);
+  //       const updatedVisible = [...prevVisible];
+  //       updatedVisible[index] = !prevVisible[index];
+  //       return updatedVisible;
+  //     });
+  //   };
+
+  const renderQuestion = (question, index) => {
+    const isExpanded = answersVisible[index];
+
+    const toggleAnswerVisibility = () => {
       setAnswersVisible((prevVisible) => {
         const updatedVisible = [...prevVisible];
         updatedVisible[index] = !prevVisible[index];
