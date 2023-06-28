@@ -1,5 +1,26 @@
 import React, { useState } from 'react';
 
+// const faqStyles = {
+//   container: {
+//     maxWidth: '800px',
+//     margin: '0 auto',
+//     padding: '20px',
+//     fontFamily: 'Arial, sans-serif',
+//   },
+//   question: {
+//     fontSize: '20px',
+//     fontWeight: 'bold',
+//     marginBottom: '10px',
+//     cursor: 'pointer',
+//   },
+//   answer: {
+//     marginBottom: '20px',
+//   },
+//   guide: {
+//     fontStyle: 'italic',
+//     marginTop: '10px',
+//   },
+// };
 const faqStyles = {
   container: {
     maxWidth: '800px',
@@ -8,19 +29,23 @@ const faqStyles = {
     fontFamily: 'Arial, sans-serif',
   },
   question: {
-    fontSize: '20px',
+    fontSize: '24px',
     fontWeight: 'bold',
     marginBottom: '10px',
     cursor: 'pointer',
+    color: '#333',
   },
   answer: {
     marginBottom: '20px',
+    color: '#666',
   },
   guide: {
     fontStyle: 'italic',
     marginTop: '10px',
+    color: '#999',
   },
 };
+
 
 function FAQ() {
   const [answersVisible, setAnswersVisible] = useState([]);
@@ -51,17 +76,44 @@ function FAQ() {
     );
   };
 
-  const renderQuestion = (question, index) => (
-    <div key={`question-${index}`}>
-      <h3
-        style={faqStyles.question}
-        onClick={() => toggleAnswerVisibility(index)}
-      >
-        {question.question}
-      </h3>
-      {renderAnswer(question.answer, index)}
-    </div>
-  );
+  // const renderQuestion = (question, index) => (
+  //   <div key={`question-${index}`}>
+  //     <h3
+  //       style={faqStyles.question}
+  //       onClick={() => toggleAnswerVisibility(index)}
+  //     >
+  //       {question.question}
+  //     </h3>
+  //     {renderAnswer(question.answer, index)}
+  //   </div>
+  // );
+  const renderQuestion = (question, index) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const toggleAnswerVisibility = () => {
+      setIsExpanded((prevExpanded) => !prevExpanded);
+    };
+
+    return (
+      <div key={`question-${index}`}>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <h3 style={faqStyles.question} onClick={toggleAnswerVisibility}>
+            {question.question}
+          </h3>
+          <span style={faqStyles.plusMinus} onClick={toggleAnswerVisibility}>
+            {isExpanded ? '-' : '+'}
+          </span>
+        </div>
+        {isExpanded && renderAnswer(question.answer, index)}
+      </div>
+    );
+  };
 
   const faqData = [
     {
