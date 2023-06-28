@@ -70,17 +70,15 @@ p{
    align-items: center;
    /* margin-top: 3px; */
 } 
-.images{
+/* .images{
   align-items: center;
   height: 400px;
   width: 400px;
   border-radius: 7px;
   margin-right: 60px;
-}
+} */
 
   .words{
-
-
     font-family: "Varela Round", Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 45px;
@@ -88,7 +86,7 @@ p{
     color: #444444;
     margin-top: 15px;
     margin-left: 15px;
-    margin-bottom: 79px;
+    margin-bottom: 5px;
     /* overflow: hidden; */
     /* text-overflow: ellipsis; */
      /* display: -webkit-box; */
