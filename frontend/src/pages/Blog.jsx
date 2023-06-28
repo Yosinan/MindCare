@@ -29,7 +29,7 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { getCookie } from "./cookieUtil";
 
 function Blog() {
   const [title, setTitle] = useState("");
@@ -42,7 +42,12 @@ function Blog() {
 
   const fetchBlogs = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/posts");
+    const token = getCookie('Token');
+
+      const response = await axios.get("http://localhost:5000/api/posts", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },});
       setBlogs(response.data);
     } catch (error) {
       console.error("Error fetching blogs:", error);
@@ -66,7 +71,12 @@ function Blog() {
     };
 
     try {
-      await axios.post("http://localhost:5000/api/posts", postData);
+      const token = getCookie('Token');
+      await axios.post("http://localhost:5000/api/posts", postData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       setTitle("");
       setContent("");
       fetchBlogs(); // Refresh blogs after successful post
