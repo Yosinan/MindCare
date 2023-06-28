@@ -93,7 +93,7 @@ export default function Contacts() {
               placeholder='Name'
               value={name}
               onChange={(e) => setName(e.target.value)}
-              required
+              required={true}
             />
           </div>
           <div className="form-group">
@@ -105,7 +105,7 @@ export default function Contacts() {
               placeholder='Email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required
+              required={true}
             />
           </div>
           <div className="form-group">
@@ -117,7 +117,7 @@ export default function Contacts() {
               placeholder='phone'
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              required
+              required={true}
             />
           </div>
         </div>
@@ -130,7 +130,7 @@ export default function Contacts() {
             placeholder='text here'
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            required
+            required={true}
           ></textarea>
         </div>
         <div className="buttons">
