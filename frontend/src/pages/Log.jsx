@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Login from "./Login";
 import Register from "./Register";
 import ExercisesPage from "./ExercisesPage";
+import Blog from "./Blog";
 // import "./Login-register.module.css";
 
 
@@ -20,7 +21,7 @@ function toggleLoginPage() {
   return (
     <div className="Log">
       {isLoggedIn ? (
-        <ExercisesPage />
+        <Blog />
       ) : isLoginPage ? (
         <Login onLogin={handleLogin} togglePage={toggleLoginPage} />
       ) : (
