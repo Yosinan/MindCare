@@ -33,6 +33,15 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
+userSchema.set("toJSON",
+{
+  transform: (_, obj) => {
+    obj.id = obj._id;
+    delete obj._id;
+    delete obj.__v;
+  },
+})
+
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
