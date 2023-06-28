@@ -62,6 +62,19 @@ const registerUser = async (req, res, next ) => {
       return res.status(400).json({ error: 'User already exists' });
     }
 
+    // generate the token and sign that new user
+ const token = genToken(user._id); 
+
+ user.token = token;
+
+ //send the token to the frontend using cookies
+ res.cookie("Token", token, {
+   path: "/",
+   httpOnly: true,
+   sameSite: true,
+   secure: true
+ });
+
       // Save the new user to the MongoDB collection
       await user.save();
 
@@ -81,7 +94,7 @@ const registerUser = async (req, res, next ) => {
     //   }
     // });
 
-     res.status(200).json({message: "User registered successfully !!!"});
+     res.status(200).json({message: "User registered successfully !!!", token: token});
       }catch (err) {
         // res.status(404).json({ message: err.message });
         next(err);
@@ -108,21 +121,21 @@ const loginUser = async (req, res) => {
         return res.status(401).json({ message: "Incorrect email or password" });
     }
 
- // generate the token and sign that new user
- const token = genToken(user._id); 
+//  // generate the token and sign that new user
+//  const token = genToken(user._id); 
 
- user.token = token;
+//  user.token = token;
 
- //send the token to the frontend using cookies
- res.cookie("Token", token, {
-   path: "/",
-   httpOnly: true,
-   sameSite: true,
-   secure: true
- });
+//  //send the token to the frontend using cookies
+//  res.cookie("Token", token, {
+//    path: "/",
+//    httpOnly: true,
+//    sameSite: true,
+//    secure: true
+//  });
 
  await user.save();
-     return res.status(201).json({ message: "Logged in successfully !!!", token: token});
+     return res.status(201).json({ message: "Logged in successfully !!!"});
   } catch (err) {
     res.status(500).json({ message: err.message });
     next(err);
