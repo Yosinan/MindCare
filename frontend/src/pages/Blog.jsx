@@ -28,6 +28,7 @@
 // }
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import './Blog.css';
 import { getCookie } from "./cookieUtil";
 
 function Blog() {
@@ -74,7 +75,6 @@ function Blog() {
 
     try {
       const token = getCookie('Token');
-      console.log(token);
       await axios.post("http://localhost:5000/api/posts", postData, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -91,8 +91,8 @@ function Blog() {
   };
 
   return (
-    <div>
-      <div>
+    <div className="blog-container">
+      <div className="new-blog-section">
         <h2>Post a New Blog</h2>
         <form onSubmit={handleSubmit}>
           <div>
@@ -114,22 +114,22 @@ function Blog() {
           </div>
           <button type="submit">Publish</button>
         </form>
-        {errorMessage && <p>{errorMessage}</p>}
-        {successMessage && <p>{successMessage}</p>}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+        {successMessage && <p className="success-message">{successMessage}</p>}
       </div>
-      <div>
+      <div className="published-blogs-section">
         <h2>Published Blogs</h2>
-        {blogs.map((blog) => (
-          <div key={blog.id}>
-            <h3>{blog.title}</h3>
-            <p>{blog.content}</p>
-          </div>
-        ))}
+        <div className="published-blogs-container">
+          {blogs.map((blog) => (
+            <div key={blog.id} className="blog-card">
+              <h3>{blog.title}</h3>
+              <p>{blog.content}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 }
 
 export default Blog;
-
-
