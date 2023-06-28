@@ -85,6 +85,7 @@ useEffect(() => {
     //   setSuccessMessage("post published successfully.");
     setMessage("Post published successfully.");
     } catch (error) {
+      setMessage('Login to post');
       console.error("Error posting blog:", error);
     //   setErrorMessage("Error posting blog. Please try again.");
     setMessage("Error posting blog:", error);
@@ -110,9 +111,11 @@ useEffect(() => {
         // Fetch and update the blogs data
         fetchBlogs();
       } else {
+        setMessage('You can not edit others post');
         console.log('Failed to edit blog post');
       }
     } catch (error) {
+      setMessage('Error occurred while editing blog post');
       console.error('Error occurred while editing blog post:', error);
     }
   };
@@ -133,9 +136,11 @@ useEffect(() => {
         // Fetch and update the blogs data
         fetchBlogs();
       } else {
+        setMessage('You can not delete others post');
         console.log('Failed to delete blog post');
       }
     } catch (error) {
+      setMessage('Error occurred while deleting blog post');
       console.error('Error occurred while deleting blog post:', error);
     }
   };
