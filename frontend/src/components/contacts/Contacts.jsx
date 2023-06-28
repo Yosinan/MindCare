@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './Contacts.css'
 import photo from './photo.jpg'
+import { post } from '../../../../backend/routes/chatRoute';
 
 
 export default function Contacts() {
@@ -21,7 +22,7 @@ export default function Contacts() {
     };
     
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('http://localhost:5000/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -67,7 +68,7 @@ export default function Contacts() {
        
             <div className="contactInfo">
                 <h4>Address:</h4>
-                <div className='h'> Block 54,in front of Astemariwoch Lounge</div >
+                <div className='h'> Block 54,Infront of Astemariwoch Lounge</div >
                 <h4>Working Days:  </h4>
                 <div className='h'>Mon-Fri</div>
                 <h4>Phones:</h4>
