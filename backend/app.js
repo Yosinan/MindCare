@@ -7,6 +7,7 @@ const statusRouter = require("./routes/status");
 const chatRoutes = require('./routes/chatRoute');
 const postRoutes = require('./routes/postRoute');
 const contactRoutes = require('./routes/contactRoute');
+const subscriberRoutes = require('./routes/subscriberRoute');
 // const errorHandler = require('./middlewares/errorHandler');
 const cors = require("cors");
 const cookieParser = require('cookie-parser');
@@ -26,6 +27,7 @@ app.use('/', statusRouter);
 app.use('/', chatRoutes);
 app.use('/', postRoutes);
 app.use('/', contactRoutes);
+app.use('/', subscriberRoutes);
 
 // Error handler
 // app.use(errorHandler);
