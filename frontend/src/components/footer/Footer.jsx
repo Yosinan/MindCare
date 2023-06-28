@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import Contacts from "../contacts/Contacts";
-import FAQ from "./pages/FAQ";
+import FAQ from "../../pages/FAQ";
 import Blog from "../../pages/Blog";
 import About from "../about/About";
 import { Link } from "react-router-dom";
