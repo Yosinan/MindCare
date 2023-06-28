@@ -93,7 +93,7 @@ useEffect(() => {
   };
 
   const handleLogout = async () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem('Token');
     // try {
     //   const token = localStorage.getItem('Token');
     //   // const token = getCookie('Token');
