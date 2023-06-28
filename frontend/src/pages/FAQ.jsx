@@ -88,6 +88,7 @@ function FAQ() {
   //   </div>
   // );
   const renderQuestion = (question, index) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleAnswerVisibility = () => {
