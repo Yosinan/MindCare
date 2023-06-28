@@ -29,14 +29,6 @@ const faqStyles = {
 function FAQ() {
   const [answersVisible, setAnswersVisible] = useState([]);
 
-  // const toggleAnswerVisibility = (index) => {
-  //   setAnswersVisible((prevVisible) => {
-  //     const updatedVisible = [...prevVisible];
-  //     updatedVisible[index] = !prevVisible[index];
-  //     return updatedVisible;
-  //   });
-  // };
-
   const renderAnswer = (answer, index) => {
     const isVisible = answersVisible[index];
     return (
@@ -54,22 +46,6 @@ function FAQ() {
       </div>
     );
   };
-
-  // const renderQuestion = (question, index) => {
-  //   // eslint-disable-next-line react-hooks/rules-of-hooks
-  //   const [isExpanded, setIsExpanded] = useState(false);
-
-  //   // const toggleAnswerVisibility = () => {
-  //   //   setIsExpanded((prevExpanded) => !prevExpanded);
-  //   // };
-  //   const toggleAnswerVisibility = (index) => {
-  //     setAnswersVisible((prevVisible) => {
-  //       setIsExpanded((prevExpanded) => !prevExpanded);
-  //       const updatedVisible = [...prevVisible];
-  //       updatedVisible[index] = !prevVisible[index];
-  //       return updatedVisible;
-  //     });
-  //   };
 
   const renderQuestion = (question, index) => {
     const isExpanded = answersVisible[index];
