@@ -6,138 +6,150 @@ import "./Footer.css";
 // import About from "../about/About";
 import { Link } from "react-router-dom";
 
-// function Footer() {
-//   return (
-//     <div className="footer">
-
-//     <div className="box-container">
-//       <div className="box">
-//         <h3>Quick Links</h3>
-//         <Link to="/our-team">
-//           <i className="fas fa-angle-right "> </i>About Us
-//         </Link>
-//         <br></br>
-//         <Link to="/faq">
-//           <i className="fas fa-angle-right "> </i>FAQs
-//         </Link>
-//         <br></br>
-//         <Link to="/">
-//           <i className="fas fa-angle-right "> </i>Resorces
-//         </Link>
-//         <br></br>
-//         <Link to="/contacts">
-//           <i className="fas fa-angle-right "> </i>Contacts
-//         </Link>
-//         <br></br>
-//         <Link to="blog">
-//           <i className="fas fa-angle-right "> </i>Blog
-//         </Link>
-//         <br></br>
-//       </div>
- 
-//       <div className="box">
-//         <h3>Contact Info</h3>
-//         <Link to="#">
-//           <i className="fas fa-angle-right "> </i> +251-234-234-234{" "}
-//         </Link>
-//         <Link to="#">
-//           <i className="fas fa-angle-right "> </i>{" "}
-//         </Link>
-//         <Link to="#">
-//           <i className="fas fa-angle-right "> </i> info@gmail.com{" "}
-//         </Link>
-//         <Link to="#">
-//           <i className="fas fa-angle-right "> </i> Addis Ababa, Ethiopia
-//         </Link>
-//       </div>
-//       <div className="box">
-//         <h3>Follow Us</h3>
-//         <Link to="#">
-//           <i className="fab fa-facebook "> </i> Facebook{" "}
-//         </Link>
-//         <Link to="#">
-//           <i className="fab fa-instagram "> </i> Twitter{" "}
-//         </Link>
-//         <Link to="#">
-//           <i className="fab fa-twitter "> </i> Instagram{" "}
-//         </Link>
-//         {/* <Link to="#">
-//           <i className="fab fa-linkedin "> </i> Linkedin{" "}
-//         </Link> */}
-//       </div>
-//       <div className="credit">
-//         © 2023 <span>MindCare. Privacy Policy</span>
-//       </div>
-//     </div>
-//     </div>
-//   );
-// }
 function Footer() {
   return (
     <div className="footer">
-      <div className="box-container">
-        <div className="box">
-          <h3>Quick Links</h3>
-          <Link to="/our-team">
-            <i className="fas fa-angle-right"></i>
-          </Link>
-          <Link to="/faq">
-            <i className="fas fa-angle-right"></i>
-          </Link>
-          <Link to="/">
-            <i className="fas fa-angle-right"></i>
-          </Link>
-          <Link to="/contacts">
-            <i className="fas fa-angle-right"></i>
-          </Link>
-          <Link to="blog">
-            <i className="fas fa-angle-right"></i>
-          </Link>
-        </div>
-        <div className="box">
-          <h3>Contact Info</h3>
-          <Link to="#">
-            <i className="fas fa-angle-right"></i>
-          </Link>
-          <Link to="#">
-            <i className="fas fa-angle-right"></i>
-          </Link>
-          <Link to="#">
-            <i className="fas fa-angle-right"></i>
-          </Link>
-          <Link to="#">
-            <i className="fas fa-angle-right"></i>
-          </Link>
-        </div>
-        <div className="box">
-          <h3>Follow Us</h3>
-          <Link to="#">
-            <i className="fab fa-facebook"></i>
-          </Link>
-          <Link to="#">
-            <i className="fab fa-instagram"></i>
-          </Link>
-          <Link to="#">
-            <i className="fab fa-twitter"></i>
-          </Link>
-        </div>
+
+    <div className="box-container">
+      <div className="box">
+        <h3>Quick Links</h3>
+        <Link to="/our-team">
+          <i className="fas fa-angle-right "> </i>About Us
+        </Link>
+        <br></br>
+        <Link to="/faq">
+          <i className="fas fa-angle-right "> </i>FAQs
+        </Link>
+        <br></br>
+        <Link to="/">
+          <i className="fas fa-angle-right "> </i>Resorces
+        </Link>
+        <br></br>
+        <Link to="/contacts">
+          <i className="fas fa-angle-right "> </i>Contacts
+        </Link>
+        <br></br>
+        <Link to="blog">
+          <i className="fas fa-angle-right "> </i>Blog
+        </Link>
+        <br></br>
+      </div>
+ 
+      <div className="box">
+        <h3>Contact Info</h3>
+        <Link to="#">
+          <i className="fas fa-angle-right "> </i> +251-234-234-234{" "}
+        </Link>
+        <Link to="#">
+          <i className="fas fa-angle-right "> </i>{" "}
+        </Link>
+        <Link to="#">
+          <i className="fas fa-angle-right "> </i> info@gmail.com{" "}
+        </Link>
+        <Link to="#">
+          <i className="fas fa-angle-right "> </i> Addis Ababa, Ethiopia
+        </Link>
+      </div>
+      <div className="box">
+        <h3>Follow Us</h3>
+        <Link to="#">
+          <i className="fab fa-facebook "> </i> Facebook{" "}
+        </Link>
+        <Link to="#">
+          <i className="fab fa-instagram "> </i> Twitter{" "}
+        </Link>
+        <Link to="#">
+          <i className="fab fa-twitter "> </i> Instagram{" "}
+        </Link>
+        {/* <Link to="#">
+          <i className="fab fa-linkedin "> </i> Linkedin{" "}
+        </Link> */}
       </div>
       <div className="footer-bottom">
-        <span>© 2023 MindCare. Privacy Policy</span>
-        <div className="social-icons">
-          <Link to="#">
-            <i className="fab fa-facebook"></i>
-          </Link>
-          <Link to="#">
-            <i className="fab fa-instagram"></i>
-          </Link>
-          <Link to="#">
-            <i className="fab fa-twitter"></i>
-          </Link>
-        </div>
-      </div>
+         <span>© 2023 MindCare. Privacy Policy</span>
+         <div className="social-icons">
+           <Link to="#">
+             <i className="fab fa-facebook"></i>
+           </Link>
+           <Link to="#">
+             <i className="fab fa-instagram"></i>
+           </Link>
+           <Link to="#">
+             <i className="fab fa-twitter"></i>
+           </Link>
+         </div>
+       </div>
+    </div>
     </div>
   );
 }
+
+// function Footer() {
+//   return (
+//     <div className="footer">
+//       <div className="box-container">
+//         <div className="box">
+//           <h3>Quick Links</h3>
+//           <Link to="/our-team">
+//             <i className="fas fa-angle-right"></i>
+//           </Link>
+//           <Link to="/faq">
+//             <i className="fas fa-angle-right"></i>
+//           </Link>
+//           <Link to="/">
+//             <i className="fas fa-angle-right"></i>
+//           </Link>
+//           <Link to="/contacts">
+//             <i className="fas fa-angle-right"></i>
+//           </Link>
+//           <Link to="blog">
+//             <i className="fas fa-angle-right"></i>
+//           </Link>
+//         </div>
+//         <div className="box">
+//           <h3>Contact Info</h3>
+//           <Link to="#">
+//             <i className="fas fa-angle-right"></i>
+//           </Link>
+//           <Link to="#">
+//             <i className="fas fa-angle-right"></i>
+//           </Link>
+//           <Link to="#">
+//             <i className="fas fa-angle-right"></i>
+//           </Link>
+//           <Link to="#">
+//             <i className="fas fa-angle-right"></i>
+//           </Link>
+//         </div>
+//         <div className="box">
+//           <h3>Follow Us</h3>
+//           <Link to="#">
+//             <i className="fab fa-facebook"></i>
+//           </Link>
+//           <Link to="#">
+//             <i className="fab fa-instagram"></i>
+//           </Link>
+//           <Link to="#">
+//             <i className="fab fa-twitter"></i>
+//           </Link>
+//         </div>
+//       </div>
+//       <div className="footer-bottom">
+//         <span>© 2023 MindCare. Privacy Policy</span>
+//         <div className="social-icons">
+//           <Link to="#">
+//             <i className="fab fa-facebook"></i>
+//           </Link>
+//           <Link to="#">
+//             <i className="fab fa-instagram"></i>
+//           </Link>
+//           <Link to="#">
+//             <i className="fab fa-twitter"></i>
+//           </Link>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
 export default Footer;
