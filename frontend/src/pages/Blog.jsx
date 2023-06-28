@@ -173,14 +173,14 @@ useEffect(() => {
         <h2>Published Blogs</h2>
         <div className="published-blogs-container">
           {blogs.map((blog) => (
-            <div key={blog.id} className="blog-card">
+            <div key={blog._id} className="blog-card">
               <h3>{blog.title}</h3>
               {/* <i className="created-at">Created At: {blog.createdAt}</i> */}
               <i className="created-at">Posted at: {new Date(blog.createdAt).toLocaleString()}</i>
               <p>{blog.content}</p>
               <div>
-               <button onClick={() => handleEdit(blog.id)}>Edit</button>
-                <button onClick={() => handleDelete(blog.id)}>Delete</button>
+               <button onClick={() => handleEdit(blog._id)}>Edit</button>
+                <button onClick={() => handleDelete(blog._id)}>Delete</button>
           </div>
             {/* {currentUser === blog.author && (
           <div>
