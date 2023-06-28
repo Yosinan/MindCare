@@ -31,7 +31,7 @@ export default function Contacts() {
       });
       
       if (response.ok) {
-        alert('Data successfully sent to the backend!');
+        alert('Your Message is sent Successfully!');
         // Clear the input fields
         setName('');
         setEmail('');

@@ -4,10 +4,11 @@ const Contact = require('../models/contactModel');
 // Create a new contact
 const createContact = async (req, res) => {
     try {
-        const { name, email, message } = req.body;
+        const { name, email, message,  phoneNumber} = req.body;
         const newContact = new Contact({
             name,
             email,
+            phoneNumber,
             message
         });
         await newContact.save();
@@ -17,16 +18,16 @@ const createContact = async (req, res) => {
     }
 }
 
-// // Get all contacts
-// const getContacts = async (req, res) => {
-//     try {
-//         // Get all contacts from the MongoDB collection
-//         const contacts = await Contact.find();
-//         res.json(contacts);
-//     } catch (err) {
-//         res.status(500).json({ message: err.message });
-//     }
-// }
+// Get all contacts
+const getContacts = async (req, res) => {
+    try {
+        // Get all contacts from the MongoDB collection
+        const contacts = await Contact.find();
+        res.json(contacts);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+}
 
 // // Get a contact by ID
 // const getContactById =  async (req, res) => {
@@ -68,8 +69,8 @@ const createContact = async (req, res) => {
 //     }
 // }
 
-module.exports = { createContact
-    // getContacts,
+module.exports = { createContact,
+    getContacts
     // getContactById,
     // updateContact,
     // deleteContact
