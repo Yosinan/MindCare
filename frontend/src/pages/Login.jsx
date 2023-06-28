@@ -22,6 +22,7 @@ function Login({ onLogin, togglePage }) {
         if (response.ok) {
           const data = await response.json();
           // console.log(data);
+          localStorage.setItem('Token', data.token);
           onLogin(data);
         } else {
           const error = await response.json();

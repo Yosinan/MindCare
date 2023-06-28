@@ -9,8 +9,8 @@ function Blog() {
   const [createdAt, setCreatedAt] = useState("");
   const [blogs, setBlogs] = useState([]);
   const [message, setMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
+  // const [errorMessage, setErrorMessage] = useState("");
+  // const [successMessage, setSuccessMessage] = useState("");
 
   useEffect(() => {
     fetchBlogs();
@@ -18,7 +18,8 @@ function Blog() {
 
   const fetchBlogs = async () => {
     try {
-      const token = getCookie('Token');
+      // const token = getCookie('Token');
+      const token = localStorage.getItem('Token');
       const response = await axios.get("http://localhost:5000/api/posts", {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -50,7 +51,8 @@ function Blog() {
     };
 
     try {
-      const token = getCookie('Token');
+      const token = localStorage.getItem('Token');
+      // const token = getCookie('Token');
       await axios.post("http://localhost:5000/api/posts", postData, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -67,6 +69,56 @@ function Blog() {
     setMessage("Error posting blog:", error);
     }
   };
+
+  const handleEdit = async (blogId) => {
+    try {
+      // const token = getCookie('Token');
+      const token = localStorage.getItem('Token');
+      const response = await fetch(`/api/posts/${blogId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}` // Include the token in the headers 
+        },
+        body: JSON.stringify({ /* Updated blog data */ })
+      });
+  
+      if (response.ok) {
+        // Handle successful edit
+        setMessage('Blog post edited successfully!');
+        // Fetch and update the blogs data
+        fetchBlogs();
+      } else {
+        console.log('Failed to edit blog post');
+      }
+    } catch (error) {
+      console.error('Error occurred while editing blog post:', error);
+    }
+  };
+  
+  const handleDelete = async (blogId) => {
+    try {
+      const token = getCookie('Token');
+      const response = await fetch(`/api/posts/${blogId}`, {
+        method: 'DELETE',
+        headers: {
+          Authorization: `Bearer ${token}` // Include the token in the headers
+        }
+      });
+  
+      if (response.ok) {
+        // Handle successful deletion
+        setMessage('Blog post deleted successfully!');
+        // Fetch and update the blogs data
+        fetchBlogs();
+      } else {
+        console.log('Failed to delete blog post');
+      }
+    } catch (error) {
+      console.error('Error occurred while deleting blog post:', error);
+    }
+  };
+  
 
   return (
     <div className="blog-container">
@@ -105,6 +157,14 @@ function Blog() {
               {/* <i className="created-at">Created At: {blog.createdAt}</i> */}
               <i className="created-at">Posted at: {new Date(blog.createdAt).toLocaleString()}</i>
               <p>{blog.content}</p>
+              
+            {currentUser === blog.owner && (
+          <div>
+               <button onClick={() => handleEdit(blog.id)}>Edit</button>
+                <button onClick={() => handleDelete(blog.id)}>Delete</button>
+          </div>
+)}
+
               
             </div>
           ))}

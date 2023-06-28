@@ -28,7 +28,8 @@ const createPost = async (req, res) => {
         const { title, content } = req.body;
         const newPost = new Post({
             title,
-            content
+            content,
+            author: req.user._id
         });
         await newPost.save();
         res.status(201).json(newPost);
@@ -55,8 +56,8 @@ const updatePost = async (req, res) => {
 // Delete a post
 const deletePost = async (req, res) => {
     try {
-        const deletedPost = await Post.findByIdAndDelete(req.params.id);
-        res.json(deletedPost);
+     await Post.findByIdAndDelete(req.params.id);
+        // res.json(deletedPost);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }
