@@ -95,7 +95,7 @@ useEffect(() => {
     try {
       // const token = getCookie('Token');
       const token = localStorage.getItem('Token');
-      const response = await fetch(`/api/posts/${blogId}`, {
+      const response = await fetch(`http:localhost:5000/api/posts/${blogId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -178,6 +178,8 @@ useEffect(() => {
               {/* <i className="created-at">Created At: {blog.createdAt}</i> */}
               <i className="created-at">Posted at: {new Date(blog.createdAt).toLocaleString()}</i>
               <p>{blog.content}</p>
+              <p>Author: {blog.author}</p>
+              <p>ID: {blog._id}</p>
               <div>
                <button onClick={() => handleEdit(blog._id)}>Edit</button>
                 <button onClick={() => handleDelete(blog._id)}>Delete</button>
