@@ -178,13 +178,16 @@ useEffect(() => {
               {/* <i className="created-at">Created At: {blog.createdAt}</i> */}
               <i className="created-at">Posted at: {new Date(blog.createdAt).toLocaleString()}</i>
               <p>{blog.content}</p>
-              
-            {currentUser === blog.author && (
+              <div>
+               <button onClick={() => handleEdit(blog.id)}>Edit</button>
+                <button onClick={() => handleDelete(blog.id)}>Delete</button>
+          </div>
+            {/* {currentUser === blog.author && (
           <div>
                <button onClick={() => handleEdit(blog.id)}>Edit</button>
                 <button onClick={() => handleDelete(blog.id)}>Delete</button>
           </div>
-)}
+)} */}
 
               
             </div>
