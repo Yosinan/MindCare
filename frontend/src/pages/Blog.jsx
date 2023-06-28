@@ -92,22 +92,22 @@ useEffect(() => {
     }
   };
 
-  const handleLogout = async () => {
+  // const handleLogout = async () => {
 
-    // localStorage.removeItem('Token')
-    try {
-      const token = localStorage.getItem('Token');
-      // const token = getCookie('Token');
-      await axios.post("http://localhost:5000/api/users/logout", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-    } catch (error) {
-      console.error("Error logging out:", error);
-    //   setErrorMessage("Error logging out. Please try again.");
-    setMessage("Error logging out. Please try again.");
-    }
+  //   localStorage.removeItem('Token');
+    // try {
+    //   const token = localStorage.getItem('Token');
+    //   // const token = getCookie('Token');
+    //   await axios.post("http://localhost:5000/api/users/logout", {
+    //     headers: {
+    //       Authorization: `Bearer ${token}`,
+    //     },
+    //   });
+    // } catch (error) {
+    //   console.error("Error logging out:", error);
+    // //   setErrorMessage("Error logging out. Please try again.");
+    // setMessage("Error logging out. Please try again.");
+    
 
   const handleEdit = async (blogId) => {
     try {
@@ -188,7 +188,7 @@ useEffect(() => {
           
           <button type="submit">Publish</button>
         </form>
-        <button onClick={() => handleLogout}>logout</button>
+        {/* <button onClick={() => handleLogout}>logout</button> */}
         {/* {errorMessage && <p className="error-message">{errorMessage}</p>}
         {successMessage && <p className="success-message">{successMessage}</p>} */}
         {message && <p className="message">{message}</p>}
@@ -220,7 +220,6 @@ useEffect(() => {
       </div>
     </div>
   );
-}
 }
 
 export default Blog;
