@@ -3,7 +3,9 @@ import './Mindfulness.css';
 
 const MindfulnessExercise = () => {
   return (
-    <div>
+    <div className=''> 
+     
+      
       <h2>Mindfulness Exercises</h2>
       
       <h3>1. Breath Awareness</h3>
