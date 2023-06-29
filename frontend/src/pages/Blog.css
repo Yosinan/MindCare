@@ -28,8 +28,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    
   }
-  
+  .published-blogs-container h3{
+    color: #434345;
+  }
   .blog-card {
     background-color: #f5f5f5;
     padding: 20px;
