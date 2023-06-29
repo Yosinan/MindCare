@@ -1,31 +1,47 @@
-/* Define styles for the exercise list */
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    cursor: pointer;
-    padding: 5px;
-  }
-  
-  li:hover {
-    background-color: #f0f0f0;
-  }
-  
-  /* Define styles for the selected exercise */
-  .exercise-container {
-    margin-top: 20px;
-  }
-  
-  /* Hide exercises by default */
-  .exercise {
-    display: none;
-  }
-  
-  /* Show the selected exercise */
-  .exercise.selected {
-    display: block;
-  }
-  
+.exercises-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.exercises-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.exercises-image {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.exercises-description {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.exercises-select {
+  display: block;
+  margin: 0 auto;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #f4f4f4;
+  margin-bottom: 40px;
+  max-width: 400px;
+}
+
+.exercise-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
