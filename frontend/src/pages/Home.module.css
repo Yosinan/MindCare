@@ -1,35 +1,132 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
-.home{
- 
+.home {
+  padding-bottom: 20px;
+  margin-bottom: 200px;
 }
-.front{
-
+.front {
 }
-.image{
+.image {
   position: relative;
   left: -15%;
 }
 
-.image img{
+.image img {
 }
-.front_qoute{
+.front_qoute {
   position: absolute;
-  top: 12%;
+  top: 24%;
   left: 48%;
   max-width: 550px;
-
 }
-.front_qoute h1{
+.front_qoute h1 {
   font-size: 3.5rem;
-  
 }
-.front_qoute p{
+.front_qoute p {
   font-size: 1.2rem;
   line-height: 2rem;
   margin-top: 10px;
+  color: #9b9b9b;
+}
+
+.welcome_part{
+  text-align: center;
+  /* padding: 50px 20px; */
+  width: 50%;
+  margin: 100px auto 100px auto;
+}
+.welcome_part h1{
+  text-align: center;
+  font-size: 55px;
+  padding-top: 100px;
+  margin-bottom: 16px;
+  color: #434345;
+    font-family: 'pt serif',serif;
+    font-weight: 700;
+    line-height: 1.2307;
+    position: relative;
+    margin-top: 0;
+    text-rendering: optimizelegibility;
+
+}
+.welcome_part p{
+  color: #9b9b9b;
+  padding-bottom: 12px;
+}
+
+
+.welcome_part hr{
+  border: dotted #58c56f 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto 100px auto;
+}
+.services{
+  text-align: center;
+  /* padding: 50px 20px; */
+  width: 50%;
+  margin: 100px auto 100px auto;
+}
+.services hr{
+  border: dotted #58c56f 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto 100px auto;
+}
+
+.services h1{
+  text-align: center;
+  font-size: 55px;
+  padding-top: 100px;
+  margin-bottom: 16px;
+  color: #434345;
+    font-family: 'pt serif',serif;
+    font-weight: 700;
+    line-height: 1.2307;
+    position: relative;
+    margin-top: 0;
+    text-rendering: optimizelegibility;
+}
+.services p{
+  color: #9b9b9b;
+  padding-bottom: 12px;
+}
+.services_buttom img {
+  height: 100%;
+  width: 100%;
+}
+.services_buttom {
+  display: flex;
+  padding: 4em;
+  margin-bottom: 200px;
+  /* justify-content: center; */
+}
+
+.services_side {
+  border: 5px solid #58c56f;
+  /* padding: 4em; */
+  position: absolute;
+  left: 86%;
+  top: 210%;
+  height: 510px;
+}
+.services_side hr{
+  border: #58c56f 6px solid;
+  width: 50%;
+}
+
+.services_containers {
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.testimonails{
+  background-color: #f4f4f4;
+  text-align: center;
+  /* padding: 50px 20px; */
+  width: 50%;
+  margin: 100px auto 100px auto;
 }

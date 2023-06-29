@@ -13,6 +13,7 @@ import FAQ from "./pages/FAQ";
 import Blog from "./pages/Blog";
 import Our_team from "./pages/Our_team";
 import Footer from "./components/footer/Footer";
+import About from './pages/About'
 
 import ExercisesPage from "./pages/ExercisesPage";
 
@@ -28,12 +29,14 @@ const App = () => {
 
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
+        {/* <Route path="/blog" element={<Blog />} /> */}
         <Route path="/our-team" element={<Our_team />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/exercise" element={<ExercisesPage />} />
-        <Route path="/Login" element={<Log />} />
+        <Route path="/login" element={<Log />} />
+        <Route path="/abouts" element={<About/>} />
+
 
       </Routes>
       <Footer/>

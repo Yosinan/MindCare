@@ -4,7 +4,8 @@
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(79deg,#98ff98,#e6e6fa,#ffe4e1);
+  background-color: #58c56f;
+  /* background-image: linear-gradient(79deg,#98ff98,#e6e6fa,#ffe4e1); */
   /* background-image: linear-gradient(to bottom,#7fff00,#00ff7f); */
   /* background-image: linear-gradient(to bottom,#8adde6,#87cefa,#87cee8); */
   /* background-image: linear-gradient(79deg,#add8e6,#89cff0,48%,#87ceeb); */
@@ -47,7 +48,7 @@ input{
 
 button{
   border: none;
-  background-color: rgb(105, 146, 143);
+  background-color: black;
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;

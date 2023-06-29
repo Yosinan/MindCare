@@ -4,69 +4,55 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="footer">
-
-    <div className="box-container">
-      <div className="box">
-        <h3>Quick Links</h3>
-        <Link to="">
-          <i className="fas fa-angle-right "> </i>About Us
-        </Link>
-        <br></br>
-        <Link to="/">
-          <i className="fas fa-angle-right "> </i>FAQs
-        </Link>
-        <br></br>
-        <Link to="/">
-          <i className="fas fa-angle-right "> </i>Resorces
-        </Link>
-        <br></br>
-        <Link to="">
-          <i className="fas fa-angle-right "> </i>Contacts
-        </Link>
-        <br></br>
-        <Link to="">
-          <i className="fas fa-angle-right "> </i>Blog
-        </Link>
-        <br></br>
-      </div>
- 
-      <div className="box">
-        <h3>contact links</h3>
-        <Link to="#">
-          <i className="fas fa-angle-right "> </i> +251-234-234-234{" "}
-        </Link>
-        <Link to="#">
-          <i className="fas fa-angle-right "> </i>{" "}
-        </Link>
-        <Link to="#">
-          <i className="fas fa-angle-right "> </i> info@gmail.com{" "}
-        </Link>
-        <Link to="#">
-          <i className="fas fa-angle-right "> </i> Addis Ababa, Ethiopia
-        </Link>
-      </div>
-      <div className="box">
-        <h3>Follow Us</h3>
-        <Link to="#">
-          <i className="fab fa-facebook "> </i> Facebook{" "}
-        </Link>
-        <Link to="#">
-          <i className="fab fa-instagram "> </i> Twitter{" "}
-        </Link>
-        <Link to="#">
-          <i className="fab fa-twitter "> </i> Instagram{" "}
-        </Link>
-        <Link to="#">
-          <i className="fab fa-linkedin "> </i> Linkedin{" "}
-        </Link>
-      </div>
+    <footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="#">about us</a></li>
+  	 				<li><a href="#">our services</a></li>
+  	 				<li><a href="#">privacy policy</a></li>
+  	 				<li><a href="#">affiliate program</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>get help</h4>
+  	 			<ul>
+  	 				<li><a href="#">FAQ</a></li>
+  	 				<li><a href="#">shipping</a></li>
+  	 				<li><a href="#">returns</a></li>
+  	 				<li><a href="#">order status</a></li>
+  	 				<li><a href="#">payment options</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>online shop</h4>
+  	 			<ul>
+  	 				<li><a href="#">watch</a></li>
+  	 				<li><a href="#">bag</a></li>
+  	 				<li><a href="#">shoes</a></li>
+  	 				<li><a href="#">dress</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
       <div className="credit">
         © 2023 <span>MindCare. Privacy Policy</span>
-      </div>
-    </div>
-    </div>
-  );
+      </div> 
+    
+    
+    </footer>
+    );
 }
 
 export default Footer;
