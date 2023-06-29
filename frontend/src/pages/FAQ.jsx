@@ -2,21 +2,26 @@ import React, { useState } from 'react';
 
 const faqStyles = {
   container: {
-    maxWidth: '800px',
+    maxWidth: '600px',
     margin: '0 auto',
-    padding: '20px',
-    fontFamily: 'Arial, sans-serif',
+    padding: '0 15px',
+    fontFamily: 'open-sans, sans-serif',
   },
   question: {
-    fontSize: '24px',
+    fontSize: '18px',
     fontWeight: 'bold',
     marginBottom: '10px',
     cursor: 'pointer',
-    color: '#333',
+    color: '#434345',
+    padding: '14px 50px 14px 24px',
+    fontFamily: 'open sans,sans-serif',
+    height: '10px', 
   },
   answer: {
     marginBottom: '20px',
-    color: '#666',
+    color: '#9b9b9b',
+    font: '15px',
+    padding: '24px 0px 0px 24px',
   },
   guide: {
     fontStyle: 'italic',
