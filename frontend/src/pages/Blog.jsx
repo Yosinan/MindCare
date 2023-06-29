@@ -188,9 +188,9 @@ useEffect(() => {
           
           <button type="submit">Publish</button>
         </form>
-        <button onClick={() => handleLogout}>logout</button> */}
+        {/* <button onClick={() => handleLogout}>logout</button> */}
         {/* {errorMessage && <p className="error-message">{errorMessage}</p>}
-        {successMessage && <p className="success-message">{successMessage}</p>}
+        {successMessage && <p className="success-message">{successMessage}</p>} */}
         {message && <p className="message">{message}</p>}
       </div>
       <div className="published-blogs-section">
@@ -202,10 +202,7 @@ useEffect(() => {
               {/* <i className="created-at">Created At: {blog.createdAt}</i> */}
               <i className="created-at">Posted at: {new Date(blog.createdAt).toLocaleString()}</i>
               <p>{blog.content}</p>
-              {/* <div>
-               <button onClick={() => handleEdit(blog._id)}>Edit</button>
-                <button onClick={() => handleDelete(blog._id)}>Delete</button>
-          </div> */}
+              
             {/* {currentUser === blog.author && (
           <div>
                <button onClick={() => handleEdit(blog.id)}>Edit</button>
